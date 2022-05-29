@@ -1387,4 +1387,44 @@
 			}
 		}
 	}
+
+  @media screen and (max-width: 500px){
+    .form_input1 {
+      width: 100% !important;
+      margin-bottom: 10px;
+
+      .Phone_Number_Input {
+        width: 100% !important;
+        height: auto !important;
+
+        /deep/.country-selector__input {
+          height: auto !important;
+        }
+
+        /deep/.input-tel__input {
+          height: auto !important;
+        }
+      }
+
+      .form_input1_content, input {
+        height: 30px !important;
+      }
+    }
+
+     .form_input, .form_input2, .form_input3 {
+        width: 100% !important;
+
+        .el-date-editor {
+          height: 30px !important;
+
+          /deep/ input {
+            height: 30px !important;
+          }
+        }
+
+       input {
+         height: 30px !important;
+       }
+     }
+  }
 </style>
