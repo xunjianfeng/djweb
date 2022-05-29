@@ -17,10 +17,10 @@
 								</div>
 							</div>
 						</div>
-						
-						
+
+
 					</div>
-					
+
 					<!-- 赛事行程 -->
 					<!-- 版块head -->
 					<div class="round_loop" v-if="format == 3">
@@ -42,7 +42,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<!-- 双败 -->
 					<div class="selection_step" v-if="format == 2">
 						<!-- 胜利组 -->
@@ -71,7 +71,7 @@
 											<div class="select_top">
 												<div class="select_top_left">
 													<el-image :src="HOST + item1.teamLogoA" class="select_img">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" class="default_img"/>
 														</div>
 													</el-image>
@@ -84,12 +84,12 @@
 												</div>
 												<div class="select_top_right" :class="item1.aScore > item1.bScore?'select_color':''">
 													{{item1.aScore}}
-												</div>	
+												</div>
 											</div>
 											<div class="select_bottom">
 												<div class="select_top_left">
 													<el-image :src="HOST + item1.teamLogoB" class="select_img">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" class="default_img"/>
 														</div>
 													</el-image>
@@ -139,7 +139,7 @@
 											<div class="select_top">
 												<div class="select_top_left">
 													<el-image :src="HOST + item1.teamLogoA" class="select_img">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" class="default_img"/>
 														</div>
 													</el-image>
@@ -152,12 +152,12 @@
 												</div>
 												<div class="select_top_right" :class="item1.aScore > item1.bScore?'select_color':''">
 													{{item1.aScore}}
-												</div>	
+												</div>
 											</div>
 											<div class="select_bottom">
 												<div class="select_top_left">
 													<el-image :src="HOST + item1.teamLogoB" class="select_img">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" class="default_img"/>
 														</div>
 													</el-image>
@@ -180,7 +180,7 @@
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
 					<!-- 单败 -->
@@ -195,7 +195,7 @@
 											<div class="select_top">
 												<div class="select_top_left">
 													<el-image :src="HOST + item1.teamLogoA" class="select_img">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" class="default_img"/>
 														</div>
 													</el-image>
@@ -208,12 +208,12 @@
 												</div>
 												<div class="select_top_right" :class="item1.aScore > item1.bScore?'select_color':''">
 													{{item1.aScore}}
-												</div>	
+												</div>
 											</div>
 											<div class="select_bottom">
 												<div class="select_top_left">
 													<el-image :src="HOST + item1.teamLogoB" class="select_img">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" class="default_img"/>
 														</div>
 													</el-image>
@@ -235,7 +235,7 @@
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
@@ -247,7 +247,7 @@
 									<div class="select_top" v-for="(item,index) in list" :key="index">
 										<div class="select_top_left">
 											<el-image :src="HOST + item.teamLogo" class="select_img">
-												<div slot="error" class="image-slot"> 
+												<div slot="error" class="image-slot">
 													<img src="../../assets/images/default.png" class="default_img"/>
 												</div>
 											</el-image>
@@ -267,7 +267,7 @@
 											<div class="border_in"></div>
 										</div>
 									</div>
-								</div>	
+								</div>
 							</div>
 						</div>
 						<div class="step_list_two" :style="'margin-top:'+9 * list.length+'px'">
@@ -276,7 +276,7 @@
 									<div class="select_top" v-for="(item,index) in list" :key="index" v-if="index < 3">
 										<div class="select_top_left">
 											<el-image :src="HOST + item.teamLogo" class="select_img">
-												<div slot="error" class="image-slot"> 
+												<div slot="error" class="image-slot">
 													<img src="../../assets/images/default.png" class="default_img"/>
 												</div>
 											</el-image>
@@ -321,7 +321,7 @@
 											<div class="group_btom_block2">
 												<div class="group_radius">
 													<el-image :src="HOST + gtem.logo" style="width:100%;max-height: 100%;object-fit: cover;">
-														<div slot="error" class="image-slot"> 
+														<div slot="error" class="image-slot">
 															<img src="../../assets/images/default.png" style="width:100%;max-height: 100%;"/>
 														</div>
 													</el-image>
@@ -342,12 +342,12 @@
 													<!-- <div :class="index1==0?'group_color':index1==1?'group_color2':'group_color3'" v-for="(item,index1) in gtem.history" :key="index1" >{{item}}</div> -->
 													<!-- <div :class="gtem.history=='D'?'group_color':gtem.history == 'W'?'group_color2':'group_color3'" v-for="(item,index1) in gtem.history" :key="index1" >{{item}}</div> -->
 													<!-- <div :class="gtem.history[index1]=='D'?'group_color':gtem.history[index1] == 'W'?'group_color2':'group_color3'" v-for="(item,index1) in gtem.history" :key="index1" >{{item}}</div> -->
-													<div :class="gtem.history[0]=='T'?'group_color2':gtem.history[0] == 'W'?'group_color':'group_color3'" >{{gtem.history[0]}}</div>
-													<div :class="gtem.history[1]=='T'?'group_color2':gtem.history[1] == 'W'?'group_color':'group_color3'" v-if="gtem.history.length>=2">{{gtem.history[1]}}</div>
-													<div :class="gtem.history[2]=='T'?'group_color2':gtem.history[2] == 'W'?'group_color':'group_color3'" v-if="gtem.history.length>=3">{{gtem.history[2]}}</div>
+													<div :class="gtem.history[0]=='D'?'group_color2':gtem.history[0] == 'W'?'group_color':'group_color3'" >{{gtem.history[0]}}</div>
+													<div :class="gtem.history[1]=='D'?'group_color2':gtem.history[1] == 'W'?'group_color':'group_color3'" v-if="gtem.history.length>=2">{{gtem.history[1]}}</div>
+													<div :class="gtem.history[2]=='D'?'group_color2':gtem.history[2] == 'W'?'group_color':'group_color3'" v-if="gtem.history.length>=3">{{gtem.history[2]}}</div>
 													<div v-if="gtem.history.length>=4">……</div>
 													<div class="group_status_area" v-if="gtem.group_status == true">
-														<div :class="gtem.history[index1]=='T'?'group_color3':gtem.history[index1] == 'W'?'group_color':'group_color3'" v-for="(item,index1) in gtem.history" :key="index1" >{{item}}</div>
+														<div :class="gtem.history[index1]=='D'?'group_color2':gtem.history[index1] == 'W'?'group_color':'group_color3'" v-for="(item,index1) in gtem.history" :key="index1" >{{item}}</div>
 													</div>
 												</div>
 											</div>
@@ -376,7 +376,7 @@
 														<div class="team_top">
 															<div class="team_left">
 																<el-image :src="HOST + item2.teamLogoA" class="team_radius">
-																	<div slot="error" class="image-slot"> 
+																	<div slot="error" class="image-slot">
 																		<img src="../../assets/images/default.png" class="default_img"/>
 																	</div>
 																</el-image>
@@ -394,7 +394,7 @@
 														<div class="team_btom">
 															<div class="team_left">
 																<el-image :src="HOST + item2.teamLogoB" class="team_radius">
-																	<div slot="error" class="image-slot"> 
+																	<div slot="error" class="image-slot">
 																		<img src="../../assets/images/default.png" class="default_img"/>
 																	</div>
 																</el-image>
@@ -448,7 +448,7 @@
 													<div class="select_top">
 														<div class="select_top_left">
 															<el-image :src="HOST + item1.teamLogoA" class="select_img">
-																<div slot="error" class="image-slot"> 
+																<div slot="error" class="image-slot">
 																	<img src="../../assets/images/default.png" class="default_img"/>
 																</div>
 															</el-image>
@@ -461,12 +461,12 @@
 														</div>
 														<div class="select_top_right" :class="item1.aScore > item1.bScore?'select_color':''">
 															{{item1.aScore}}
-														</div>	
+														</div>
 													</div>
 													<div class="select_bottom">
 														<div class="select_top_left">
 															<el-image :src="HOST + item1.teamLogoB" class="select_img">
-																<div slot="error" class="image-slot"> 
+																<div slot="error" class="image-slot">
 																	<img src="../../assets/images/default.png" class="default_img"/>
 																</div>
 															</el-image>
@@ -516,7 +516,7 @@
 													<div class="select_top">
 														<div class="select_top_left">
 															<el-image :src="HOST + item1.teamLogoA" class="select_img">
-																<div slot="error" class="image-slot"> 
+																<div slot="error" class="image-slot">
 																	<img src="../../assets/images/default.png" class="default_img"/>
 																</div>
 															</el-image>
@@ -529,12 +529,12 @@
 														</div>
 														<div class="select_top_right" :class="item1.aScore > item1.bScore?'select_color':''">
 															{{item1.aScore}}
-														</div>	
+														</div>
 													</div>
 													<div class="select_bottom">
 														<div class="select_top_left">
 															<el-image :src="HOST + item1.teamLogoB" class="select_img">
-																<div slot="error" class="image-slot"> 
+																<div slot="error" class="image-slot">
 																	<img src="../../assets/images/default.png" class="default_img"/>
 																</div>
 															</el-image>
@@ -557,7 +557,7 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 							<!-- 单败 -->
@@ -572,7 +572,7 @@
 													<div class="select_top">
 														<div class="select_top_left">
 															<el-image :src="HOST + item1.teamLogoA" class="select_img">
-																<div slot="error" class="image-slot"> 
+																<div slot="error" class="image-slot">
 																	<img src="../../assets/images/default.png" class="default_img"/>
 																</div>
 															</el-image>
@@ -585,12 +585,12 @@
 														</div>
 														<div class="select_top_right" :class="item1.aScore > item1.bScore?'select_color':''">
 															{{item1.aScore}}
-														</div>	
+														</div>
 													</div>
 													<div class="select_bottom">
 														<div class="select_top_left">
 															<el-image :src="HOST + item1.teamLogoB" class="select_img">
-																<div slot="error" class="image-slot"> 
+																<div slot="error" class="image-slot">
 																	<img src="../../assets/images/default.png" class="default_img"/>
 																</div>
 															</el-image>
@@ -612,7 +612,7 @@
 												</div>
 											</div>
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -728,7 +728,7 @@ export default {
 					let sLeft = appoint.scrollLeft
 					//实现同步滚动，将轮数滚动条的滚动距离赋值给对阵内容区
 					appoint2.scrollLeft = sLeft
-				
+
 				 })
 		    }
 		},
@@ -743,7 +743,7 @@ export default {
 				 })
 			}
 		},
-		
+
 		showHistory(stageRankId){
 			// console.log("有反应")
 			// console.log(stageRankId)
@@ -788,7 +788,7 @@ export default {
 				// 点击第几轮对阵内容区就定位到哪里
 				appoint2.scrollLeft = blockLeft	- 200
 			 })
-			
+
 		},
 		//循环模式切换排行榜/对阵详情
 		groupIndex(index){
@@ -980,7 +980,7 @@ export default {
 						}
 						res.data.loserRounds = loserRounds;
 					}
-					
+
 				}
 				for(let h in res.data.rounds){
 					for(let g=0; g < res.data.rounds[h].length;g++){
@@ -1003,7 +1003,7 @@ export default {
 				}
 				self.detail_list = res.data;
 				self.format = res.data.stages[0].format
-			
+
 				let {id,format,group} = res.data.stages[0]
 				if(format == 3){
 					self.format1 = res.data.stages[1].format
@@ -1131,7 +1131,7 @@ export default {
 			// background: rgba(0,0,0,.7);
 		}
 	}
-	
+
 }
 
 .round_loop{
@@ -1156,7 +1156,7 @@ export default {
 			color: #BF9D62;
 		}
 	}
-	
+
 }
 .round_tab2{
 	// overflow-x: scroll;
@@ -1274,7 +1274,7 @@ export default {
 	height: 100vh;
 	position: absolute !important;;
 	top: 0 !important;
-	
+
 }
 .index_background{
 	// #1c1d21
@@ -1340,10 +1340,10 @@ export default {
 								}
 							}
 						}
-						
+
 					}
 				}
-				
+
 				.selection_step{
 					margin-top: 40px;
 					font-family:'Roboto-Regular';
@@ -1479,7 +1479,7 @@ export default {
 										.multiline_border{
 											position: absolute;
 											right: -19px;
-											top: 50px;	
+											top: 50px;
 											width: 18px;
 											height: 1px;
 											background-color:#555F6C;
@@ -1495,7 +1495,7 @@ export default {
 									}
 
 								}
-								
+
 							}
 							&::-webkit-scrollbar {
 								/*滚动条整体样式*/
@@ -1517,7 +1517,7 @@ export default {
 								// background: #1D2023;
 							}
 						}
-						
+
 					}
 				}
 				.selection_step1{
@@ -1525,7 +1525,7 @@ export default {
 					display: flex;
 					justify-content: center;
 					font-family:'Roboto-Regular';
-					// list_one 
+					// list_one
 					.step_list_one{
 						.step_list_block{
 							position: relative;
@@ -1645,12 +1645,12 @@ export default {
 										background-color: #3D3D3D;
 									}
 								}
-								
+
 							}
 						}
-						
+
 					}
-					// list_one end 
+					// list_one end
 					// list_two
 					.step_list_two{
 						margin-left: 40px;
@@ -1772,10 +1772,10 @@ export default {
 										background-color: #3D3D3D;
 									}
 								}
-								
+
 							}
 						}
-						
+
 					}
 				}
 				.selection_step2{
@@ -1967,7 +1967,7 @@ export default {
 														margin-right: 10px;
 													}
 												}
-																					
+
 											}
 										}
 										.group_btom_block3{
@@ -1984,7 +1984,7 @@ export default {
 						.group_table_block:last-child{
 							margin-bottom: 0;
 						}
-						
+
 						// 对阵详情
 						.grou_tabs_information{
 							margin-bottom: 142px;
@@ -2230,6 +2230,6 @@ export default {
 				}
 			}
 		}
-	} 
+	}
 }
 </style>
