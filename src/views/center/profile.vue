@@ -28,7 +28,7 @@
 					</div>
 					<div class="right_form_change">
 						<!-- <el-image :src="HOST +  info_list.avatar" class="active1_img" :rules="ruleValidate" ref="formValidate">
-							<div slot="error" class="image-slot"> 
+							<div slot="error" class="image-slot">
 								<img src="../../assets/images/default.png" class="active1_img"/>
 							</div>
 						</el-image> -->
@@ -93,7 +93,7 @@
 									<p>Phone Number<span>*</span></p>
 									<div class="Phone_Number_Input">
 										<VuePhoneNumberInput id="phoneNumber1" v-model="info_list.phoneNumber"
-											:default-country-code="info_list.countryCode" @update="onUpdate" 
+											:default-country-code="info_list.countryCode" @update="onUpdate"
 											:disabled="disabled" />
 									</div>
 									<!-- <div class="form_input1_content">
@@ -139,9 +139,9 @@
 									<p>Date of Birth</p>
 									<div class="date_picker">
 										<el-date-picker v-model="date_value" disabled v-if="modify_text == 'Edit'"
-											type="date" format="MM-dd"></el-date-picker>
+											type="date" format="MM-dd" value-format="MM-dd"></el-date-picker>
 										<el-date-picker v-model="date_value" popper-class="picker-date"
-											v-if="modify_text != 'Edit'" type="date" format="MM-dd"></el-date-picker>
+											v-if="modify_text != 'Edit'" type="date" format="MM-dd" value-format="MM-dd"></el-date-picker>
 									</div>
 								</div>
 								<div class="form_input2">
@@ -155,11 +155,11 @@
 								</div>
 								<div class="form_input2">
 									<p>Nationality</p>
-									<input type="text" v-model="info_list.nationality" disabled 
+									<input type="text" v-model="info_list.nationality" disabled
 										v-if="modify_text == 'Edit'">
 									<!-- filterable :filter-method="filter" @focus="clickClearNa" -->
 									<el-select class="user_name" :popper-append-to-body="false"
-										placeholder="Please select" v-model="nationality" 
+										placeholder="Please select" v-model="nationality"
 										filterable :filter-method="filter1" @focus="clickClearNa" @blur="clickInfoNa"
 										@change="chaneInfoNa"
 										v-if="modify_text != 'Edit'">
@@ -367,7 +367,7 @@
 					this.addressCountry = this.addressCountry
 				}
 			},
-			
+
 			//国家筛选
 			filter(val) {
 				console.log(val,"筛选")
@@ -386,10 +386,10 @@
 							})
 							console.log(result,"result")
 							that.addressCountry = val
-							//搜索到相应的数据就把符合条件的n个数据赋值brand 
+							//搜索到相应的数据就把符合条件的n个数据赋值brand
 							that.country = result
 						}else{
-							//没有搜索到数据，就还展示所有的brand 
+							//没有搜索到数据，就还展示所有的brand
 							that.country = that.copy
 						}
 					}
@@ -412,10 +412,10 @@
 								}
 							})
 							that.nationality = val
-							//搜索到相应的数据就把符合条件的n个数据赋值brand 
+							//搜索到相应的数据就把符合条件的n个数据赋值brand
 							that.country = result
 						}else{
-							//没有搜索到数据，就还展示所有的brand 
+							//没有搜索到数据，就还展示所有的brand
 							that.country = that.copy
 						}
 					}
@@ -453,10 +453,10 @@
 							})
 							console.log(result,"result")
 							that.addressState = val
-							//搜索到相应的数据就把符合条件的n个数据赋值brand 
+							//搜索到相应的数据就把符合条件的n个数据赋值brand
 							that.stateList = result
 						}else{
-							//没有搜索到数据，就还展示所有的brand 
+							//没有搜索到数据，就还展示所有的brand
 							that.stateList = that.stateCopy
 						}
 					}
@@ -480,7 +480,7 @@
 				}
 				this.cropper_status = false;
 			},
-			
+
 			onUpdate(payload) {
 				this.results = payload
 				this.info_list.phoneNumber = payload.nationalNumber
@@ -541,11 +541,11 @@
 						let day_timess = new Date(parseInt(date_timestamp))
 						let day_day =
 							`${day_timess.getFullYear()}-${day_timess.getMonth()+1}-${day_timess.getDate()}`
-						self.year_value = day_day.substring(0, 4)
-						self.date_value = day_day.substring(5, 9)
+						self.year_value = day_day.split('-')[0]
+						self.date_value = day_day.split('-')[1] + '-' + day_day.split('-')[2]
 						self.all_stamp = res.data.userInfo.birthday
-						self.all_year_value = day_day.substring(0, 4)
-						self.all_date_value = day_day.substring(5, 9)
+						self.all_year_value = day_day.split('-')[0]
+						self.all_date_value = day_day.split('-')[1] + '-' + day_day.split('-')[2]
 					} else {
 
 					}
@@ -570,7 +570,7 @@
 						type: 'error'
 					});
 				}
-				
+
 			},
 			beforeAvatarUpload(file) {
 				const isJPG = file.type;
@@ -613,16 +613,20 @@
 							return false;
 						} else {
 							// 判断日期有没有修改过，没修改还是用详情返回的
-							if (self.all_date_value == self.date_value) {
-								self.stamp = self.all_stamp
-								self.birthday = self.all_year_value + '-' + self.date_value
-							} else {
-								let year_time = self.year_value;
-								let month_time = self.date_value.getMonth() + 1;
-								let day_time = self.date_value.getDate();
-								self.birthday = year_time + '-' + month_time + '-' + day_time;
-								self.stamp = Date.parse(self.birthday)
-							}
+							// if (self.all_year_value == self.year_value && self.all_date_value == self.date_value) {
+							// 	self.stamp = self.all_stamp
+							// 	self.birthday = self.all_year_value + '-' + self.date_value
+							// } else {
+							// 	let year_time = self.year_value;
+							// 	let month_time = self.date_value.getMonth() + 1;
+							// 	let day_time = self.date_value.getDate();
+							// 	self.birthday = year_time + '-' + month_time + '-' + day_time;
+							// 	self.stamp = Date.parse(self.birthday)
+							// }
+
+              self.birthday = self.year_value + '-' + self.date_value
+              self.stamp = Date.parse(self.birthday)
+
 							let submit_info = {
 								userId: user_Id,
 								fullName: self.info_list.fullName,
