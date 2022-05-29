@@ -172,7 +172,7 @@
               <div class="match_left">
                 <img :src="HOST + item.tournamentCover"
                      alt="">
-                <div class="championBox">
+                <!-- <div class="championBox"> -->
                   <!-- 团队 -->
                   <!-- <div class="championTeam">
                     <img class="championTeamIcon"
@@ -181,12 +181,12 @@
                          src="../../assets/images/icon-champion.png">
                   </div> -->
                   <!-- 个人 -->
-                  <div class="championPerson">
+                  <!-- <div class="championPerson">
                     <img class="championPersonAvatar"
                          src="../../assets/images/icon-champion.png">
-                    <div class="championPersonName">Crystal Palance</div>
-                  </div>
-                </div>
+                    <div class="championPersonName">{{item.rank}}</div>
+                  </div> -->
+                <!-- </div> -->
               </div>
               <div class="match_right">
                 <el-tooltip class="item"
