@@ -23,16 +23,16 @@
 			<p :class="nav==2?'av':''" @click="navs(2)">Security</p>
 			<p :class="nav==3?'av':''" @click="navs(3)">Played Game</p>
 			<!-- 隐蔽项start -->
-			<!-- <p :class="nav==4?'av':''" @click="navs(4)">My Order</p> -->
+			<p :class="nav==4?'av':''" @click="navs(4)">My Order</p>
 			<!-- 隐蔽项end -->
 			<p :class="nav==5?'av':''" @click="navs(5)">Membership</p>
 			<p :class="nav==6?'av':''" @click="navs(6)">Friend List</p>
 			<!-- 隐蔽项start -->
-			<!-- <p :class="nav==7?'av':''" @click="navs(7)">My Followers | Following</p> -->
+			<p :class="nav==7?'av':''" @click="navs(7)">My Followers | Following</p>
 			<!-- 隐蔽项end -->
 			<p :class="nav==8?'av':''" @click="navs(8)">Achievements</p>
 			<!-- 隐蔽项start -->
-			<!-- <p :class="nav==9?'av':''" @click="navs(9)">My Redemption</p> -->
+			<p :class="nav==9?'av':''" @click="navs(9)">My Redemption</p>
 			<!-- 隐蔽项end -->
 			<p :class="nav==10?'av':''" @click="navs(10)">Setting</p>
         </div>

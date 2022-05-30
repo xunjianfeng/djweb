@@ -11,12 +11,12 @@
 						<p>Wallet</p>
 					</div>
 					<!-- 隐蔽项start -->
-					<!-- <div class="adiv" @click="jump_pagee(3)">
+					<div class="adiv" @click="jump_pagee(3)">
 						<p>Host</p>
 					</div>
 					<div class="adiv" @click="jump_pagee(4)">
 						<p>Companion</p>
-					</div> -->
+					</div>
 					<!-- 隐蔽项end -->
 				</div>
 				<div class="content_right_form">
