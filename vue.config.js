@@ -14,9 +14,9 @@ module.exports = {
 	devServer: {
 		proxy: {
 			'/api': {
-				// target: 'https://api.bountee.com.my/api/', //正式服
+				target: 'https://api.bountee.com.my/api/', //正式服
 				// target: 'http://n1-03.qjun.com.cn:17780',//慢慢测试服
-				target: 'http://13.212.212.253/game/api/',//测试服
+				// target: 'http://13.212.212.253/game/api/',//测试服
 				ws: true,
 				changeOrigin: true, //允许跨域
 				pathRewrite: {

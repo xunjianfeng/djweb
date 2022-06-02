@@ -33,9 +33,9 @@ Vue.prototype.PageNumber = page_number //设置成全局变量，让每个组件
 
 Vue.prototype.Clipboard = Clipboard;
 // Vue.prototype.HOST = 'http://8002.frp.wanghuiwen.com/'
-// Vue.prototype.HOST = 'https://api.bountee.com.my/api/' //正式服
+Vue.prototype.HOST = 'https://api.bountee.com.my/api/' //正式服
 // todo
-Vue.prototype.HOST = 'http://13.212.212.253/game/api/' //测试服
+// Vue.prototype.HOST = 'http://13.212.212.253/game/api/' //测试服
 Vue.prototype.initDete = function(date) {
 	// var timestamp4 = new Date(date); //直接用 new Date(时间戳) 格式转化获得当前时间
 	// return timestamp4.toLocaleDateString().replace(/\//g, "-") + " " + timestamp4.toTimeString().substr(0, 8)
