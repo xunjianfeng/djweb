@@ -6,8 +6,8 @@ import {
 // const BASE_URL = 'http://8002.frp.wanghuiwen.com/' //接口路径   测试环境
 // const BASE_URL = 'http://n1-03.qjun.com.cn:17780' //接口路径   生产环境、、
 // todo
-    const BASE_URL = 'http://13.212.212.253/game/api/' //接口路径   生产环境、测试服
-	// const BASE_URL = 'https://api.bountee.com.my/api/' //接口路径   正式环境、正式服
+    // const BASE_URL = 'http://13.212.212.253/game/api/' //接口路径   生产环境、测试服
+	const BASE_URL = 'https://api.bountee.com.my/api/' //接口路径   正式环境、正式服
     // 创建axios
 const service = axios.create({
         baseURL: BASE_URL,
