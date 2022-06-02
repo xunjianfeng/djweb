@@ -29,7 +29,7 @@
 						<div class="in_btn" @click="jump_apply(1)">Apply</div>
 					</div>
 					<!-- 等级不够 -->
-					<div class="in_content" v-if="companionGame.length  == 0 && userinfo.vipLevel =='BASE'" style="margin: 80px auto;">
+					<div class="in_content" v-if="companionGame.length  == 0 && userinfo.vipLevel =='BASIC'" style="margin: 80px auto;">
 						<div class="in_tit">Apply to be a Companion</div>
 						<div class="in_info">Please upgrade to Pro Max member before you could apply to provide Companion service.</div>
 						<div class="in_btn" @click="jump_apply(0)">I want to be Pro Max Member</div>
